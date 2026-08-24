@@ -39,8 +39,6 @@ NetworkEvents.dataReceived("global.pearlKey.consumeClick", event => {
     }
 })
 ServerEvents.recipes((event) => {
-    const gtr = event.recipes.gtceu
-
     event.shaped("kubejs:warped_ender_pearl", [
         "ABA",
         "BDB",
