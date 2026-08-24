@@ -50,3 +50,4 @@ ServerEvents.recipes((event) => {
         B: "minecraft:blaze_powder",
         D: "minecraft:ender_pearl"
     })
+})
