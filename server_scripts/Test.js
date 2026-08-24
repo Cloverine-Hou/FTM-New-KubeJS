@@ -16,3 +16,37 @@ ItemEvents.firstRightClicked("kubejs:warped_ender_pearl", event => {
         }
     }
 })
+NetworkEvents.dataReceived("global.pearlKey.consumeClick", event => {
+    if (event.player.getHeldItem("main_hand") == "kubejs:warped_ender_pearl") {
+        let pearl = event.player.persistentData.getInt("pearl")
+        if (event.player.isSteppingCarefully()) {
+            if (pearl == 0) {
+                event.player.persistentData.putInt("pearl", 10)
+                event.player.setStatusMessage("坐标槽位：10")
+            } else {
+                event.player.persistentData.putInt("pearl", pearl - 1)
+                event.player.setStatusMessage("坐标槽位：" + (pearl - 1))
+            }
+        } else {
+            if (pearl == 10) {
+                event.player.persistentData.putInt("pearl", 0)
+                event.player.setStatusMessage("坐标槽位：0")
+            } else {
+                event.player.persistentData.putInt("pearl", pearl + 1)
+                event.player.setStatusMessage("坐标槽位：" + (pearl + 1))
+            }
+        }
+    }
+})
+ServerEvents.recipes((event) => {
+    const gtr = event.recipes.gtceu
+
+    event.shaped("kubejs:warped_ender_pearl", [
+        "ABA",
+        "BDB",
+        "ABA"
+    ], {
+        A: "minecraft:bone_meal",
+        B: "minecraft:blaze_powder",
+        D: "minecraft:ender_pearl"
+    })
