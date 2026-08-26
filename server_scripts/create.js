@@ -1,0 +1,20 @@
+ServerEvents.recipes(ftm => {
+    //安山合金
+    ftm.recipes.enderio.alloy_smelting
+        (Item.of('create:andesite_alloy'), 
+        [
+        Ingredient.of('minecraft:andesite'),
+        '#c:nuggets/zinc',
+        ])
+        .energy(5000)
+        .experience(3)
+    //黄铜
+    ftm.recipes.enderio.alloy_smelting
+        (Item.of('create:brass_ingot'),
+        [
+        Ingredient.of('minecraft:copper_ingot'),
+        '#c:nuggets/zinc',
+        ])
+        .energy(5000)
+        .experience(3)
+})
