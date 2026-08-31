@@ -36,9 +36,9 @@ ServerEvents.recipes(ftm =>{
     //创造弹药盒
     ftm.shaped('superbwarfare:creative_ammo_box',
     [
-        'BAB',
-        'ACA',
-        'BAB'
+        'BCB',
+        'CAC',
+        'BCB'
     ],
     {
         A : 'superbwarfare:ammo_box',

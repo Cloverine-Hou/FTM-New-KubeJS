@@ -17,4 +17,18 @@ ServerEvents.recipes(ftm => {
         ])
         .energy(5000)
         .experience(3)
+    //传动杆
+    ftm.custom(
+    {
+    "type": "mekmm:lathe",
+    "input": {
+    "count": 1,
+    "item": 'create:andesite_alloy'
+    },
+    "output": {
+    "count": 6,
+    "id": 'create:shaft'
+    }
+    }
+    )
 })

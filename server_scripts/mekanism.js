@@ -158,7 +158,8 @@ ServerEvents.recipes(ftm => {
     }
     )
 
-    //数控车床 铁杆
+    //数控车床
+    //铁杆
     ftm.custom(
     {
     "type": "mekmm:lathe",

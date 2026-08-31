@@ -1,4 +1,6 @@
 ServerEvents.recipes(ftm => {
+    //番茄-->生物燃料
+    ftm.recipes.mekanism.crushing('4x mekanism:bio_fuel', 'farmersdelight:tomato')
     //FTB任务书
     ftm.remove({output:'ftbquests:book'})
     ftm.shapeless(Item.of('ftbquests:book'),['#c:rods/wooden'])
@@ -28,4 +30,6 @@ ServerEvents.recipes(ftm => {
         C : 'mekanismtools:refined_obsidian_sword',
         D : 'minecraft:bow'
     })
+    //岩浆块-->岩浆膏
+    ftm.recipes.mekanism.crushing('4x minecraft:magma_cream', 'minecraft:magma_block')
 })
